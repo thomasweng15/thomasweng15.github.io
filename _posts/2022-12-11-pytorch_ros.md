@@ -18,9 +18,12 @@ In the following gist, `module_save_util.py` processes the Python 3 model and sa
 
 In our case, we trained networks with PyTorch 1.8.0/1.8.1 and deployed with PyTorch 1.3.1. I cannot give any guarantees on whether the performance is the same after porting the weights to Python 2, though in my own experiments I did not see a drop. That said, it has been a while since I have done this solution so your mileage may vary. 
 
-I’ve also heard that another workaround could be to convert the weights to be loading in C++, though I haven’t done this myself. 
+Others at the Robotics Institute have proposed the following solutions, though I haven't tried them myself:
+* Write your learning node in C++ and load your PyTorch model with libtorch
+* [https://robostack.github.io/](https://robostack.github.io/)
+* [Medium: How to setup ROS with Python 3](https://medium.com/@beta_b0t/how-to-setup-ros-with-python-3-44a69ca36674)
 
-Credit goes to [Sujay Bajracharya](https://www.linkedin.com/in/sujay-bajracharya/) for developing this solution! If there is code in the gist above from other sources, I am happy to give credit as well.
+Credit goes to [Sujay Bajracharya](https://www.linkedin.com/in/sujay-bajracharya/) for developing the solution in this post! If there is code in the gist above from other sources, I am happy to give credit as well.
 
 Full gist:
 <script src="https://gist.github.com/thomasweng15/f0de0a3a0e91e5d50c867274dae0d821.js"></script>

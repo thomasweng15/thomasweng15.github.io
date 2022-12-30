@@ -22,6 +22,7 @@ Others at the Robotics Institute have proposed the following solutions, though I
 * Write your learning node in C++ and load your PyTorch model with libtorch
 * [https://robostack.github.io/](https://robostack.github.io/)
 * [Medium: How to setup ROS with Python 3](https://medium.com/@beta_b0t/how-to-setup-ros-with-python-3-44a69ca36674)
+* If your system does not mind latency, you can run your model on another machine, passing the input and output over a network.
 
 Credit goes to [Sujay Bajracharya](https://www.linkedin.com/in/sujay-bajracharya/) for developing the solution in this post! If there is code in the gist above from other sources, I am happy to give credit as well.
 

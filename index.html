@@ -53,90 +53,11 @@ redirect_from: "/about"
 <h2>Publications</h2>
 
 <table cellpadding="10" width="100%">
-  <tr>
-    <td class="pubimg" width="250" height="100">
-        <!-- <img src="assets/papers/corl2021.png" width="150"> -->
-        <img src="assets/papers/iros22.gif" width="250">
-    </td>
-    <td><a href="https://sites.google.com/view/reskin-cloth/">Learning to Singulate Layers of Cloth based on Tactile Feedback</a><br>
-        <div class="pubauthor">
-          Sashank Tirumala*, <b>Thomas Weng*</b>, Daniel Seita*, Oliver Kroemer, Zeynep Temel, David Held<br>
-        </div>
-        <div class="pubjournal">IEEE International Conference on Intelligent Robots and Systems (IROS), 2022
-        </div>
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="pubimg" width="250" height="100">
-        <!-- <img src="assets/papers/corl2021.png" width="150"> -->
-        <img src="assets/papers/ffn.gif" width="250">
-    </td>
-    <td><a href="https://arxiv.org/abs/2111.05623">FabricFlowNet: Bimanual Cloth Manipulation with a Flow-based Policy</a><br>
-        <div class="pubauthor">
-            <b>Thomas Weng</b>, Sujay Bajracharya, Yufei Wang, Khush Agrawal, David Held<br>
-        </div>
-        <div class="pubjournal">Conference on Robot Learning (CoRL), 2021
-        </div>
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="pubimg" width="250" height="100">
-        <!-- <img src="assets/papers/iros20.png" img width="250"> -->
-        <img src="assets/papers/cloth_grasping.gif" width="250">
-    </td>
-    <td><a href="https://arxiv.org/abs/2008.05626">Cloth Region Segmentation for Robust Grasp Selection</a><br>
-        <div class="pubauthor">
-            Jianing Qian*, <b>Thomas Weng*</b>, Luxin Zhang, Brian Okorn, David Held<br>
-        </div>
-        <div class="pubjournal">IEEE International Conference on Intelligent Robots and Systems (IROS), 2020
-        <!--div style="font-size:small">
-            <a href="GOTURN/GOTURN.html">[Project Page]</a>
-            <a href="GOTURN/GOTURN.pdf">[Full Paper]</a>
-            <a href="GOTURN/supplement.pdf">[Supplement]</a></div-->
-        </div>
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="pubimg" width="250" height="100">
-        <!-- <img src="assets/papers/ral20.png" img width="250"> -->
-        <img src="assets/papers/transparent_grasping.gif" width="250">
-    </td>
-    <td><a href="https://arxiv.org/abs/2006.00028">Multi-modal Transfer Learning for Grasping Transparent and Specular Objects</a><br>
-        <div class="pubauthor">
-          <b>Thomas Weng</b>, Amith Pallankize, Yimin Tang, Oliver Kroemer, David Held<br>
-        </div>
-        <div class="pubjournal">Robotics and Automation Letters (RA-L) with presentation at the IEEE International Conference of Robotics and Automation (ICRA), 2020</div>
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="pubimg" width="250" height="100">
-        <img src="assets/papers/icra19.png" img width="250">
-    </td>
-    <td><a href="https://personalrobotics.cs.washington.edu/publications/wang2019legibleprojections.pdf">Robot Object Referencing through Legible Situated Projections</a><br>
-        <div class="pubauthor">
-          <b>Thomas Weng</b>, Leah Perlmutter, Stefanos Nikolaidis, Siddhartha Srinivasa, Maya Cakmak<br>
-        </div>
-        <div class="pubjournal">IEEE International Conference on Robotics and Automation (ICRA), 2019</div>
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="pubimg" width="250" height="100">
-        <img src="assets/papers/sui18.png" img width="250">
-    </td>
-    <td><a href="https://www.researchgate.net/profile/Yasaman_Sefidgar/publication/328176638_RobotIST_Interactive_Situated_Tangible_Robot_Programming/links/5bcabb13458515f7d9cba68b/RobotIST-Interactive-Situated-Tangible-Robot-Programming.pdf">RobotIST: Interactive Situated Tangible Robot Programming</a><br>
-        <div class="pubauthor">
-            Yasaman S Sefidgar*, <b>Thomas Weng*</b>, Heather Harvey, Sarah Elliott, Maya Cakmak<br>
-        </div>
-        <div class="pubjournal">Proceedings of the Symposium on Spatial User Interaction (SUI), 2018</div>
-        <br>
-    </td>
-  </tr>
-  <tr>
+  
+  {% for pub in site.data.pubs %}
+    {% include pub.html %}
+  {% endfor %}
+
     <td class="pubimg" width="250" height="100">
         <img src="assets/papers/icra16.png" img width="250">
     </td>

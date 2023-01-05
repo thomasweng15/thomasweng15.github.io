@@ -1,0 +1,213 @@
+# When making a new entry, copy the commented out entry, paste it, uncomment, and fill out the fields. 
+# If any of the fields are confusing look at previous examples for guidance. 
+# - abs: null
+#   authors: null
+#   award: null
+#   bib: null
+#   img: null
+#   links: {}
+#   short_id: null
+#   site: null
+#   title: null
+#   venue: null
+#   video_embed: null
+#   tags: 
+#     - null
+
+- abs: Robotic manipulation of cloth has applications ranging from fabrics manufacturing
+    to handling blankets and laundry. Cloth manipulation is challenging for robots
+    largely due to their high degrees of freedom, complex dynamics, and severe self-occlusions
+    when in folded or crumpled configurations. Prior work on robotic manipulation
+    of cloth relies primarily on vision sensors alone, which may pose challenges for
+    fine-grained manipulation tasks such as grasping a desired number of cloth layers
+    from a stack of cloth. In this paper, we propose to use tactile sensing for cloth
+    manipulation; we attach a tactile sensor (ReSkin) to one of the two fingertips
+    of a Franka robot and train a classifier to determine whether the robot is grasping
+    a specific number of cloth layers. During test-time experiments, the robot uses
+    this classifier as part of its policy to grasp one or two cloth layers using tactile
+    feedback to determine suitable grasping points. Experimental results over 180
+    physical trials suggest that the proposed method outperforms baselines that do
+    not use tactile feedback and has a better generalization to unseen fabrics compared
+    to methods that use image classifiers.
+  authors: Sashank Tirumala*, Thomas Weng*, Daniel Seita*, Oliver Kroemer, Zeynep
+    Temel, David Held
+  award: <award>Best Paper at <a href="https://romado-workshop.github.io/ROMADO2022/">ROMADO-SI</a></award>
+  bib: "@inproceedings{tirumala2022,\n\
+    \    title={Learning to Singulate Layers of Cloth based on Tactile Feedback},\n\
+    \    author={Sashank Tirumala and Thomas Weng and Daniel Seita \n\
+    \        and Oliver Kroemer and Zeynep Temel and David Held},\n\
+    \    booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n\
+    \    year={2022},\n}"
+  img: ../assets/papers/iros22.gif
+  links:
+    '[arXiv]': https://arxiv.org/abs/2207.11196
+  short_id: 2022reskinfabric
+  site: https://sites.google.com/view/reskin-cloth/home
+  title: Learning to Singulate Layers of Cloth based on Tactile Feedback
+  venue: International Conference on Intelligent Robots and Systems (IROS), 2022
+  video_embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/FTGbx1XDjJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- abs: We address the problem of goal-directed cloth manipulation, a challenging task
+    due to the deformability of cloth. Our insight is that optical flow, a technique
+    normally used for motion estimation in video, can also provide an effective representation
+    for corresponding cloth poses across observation and goal images. We introduce
+    FabricFlowNet (FFN), a cloth manipulation policy that leverages flow as both an
+    input and as an action representation to improve performance. FabricFlowNet also
+    elegantly switches between dual-arm and single-arm actions based on the desired
+    goal. We show that FabricFlowNet significantly outperforms state-of-the-art model-free
+    and model-based cloth manipulation policies. We also present real-world experiments
+    on a bimanual system, demonstrating effective sim-to-real transfer. Finally, we
+    show that our method generalizes when trained on a single square cloth to other
+    cloth shapes, such as T-shirts and rectangular cloths.
+  authors: Thomas Weng, Sujay Bajracharya, Yufei Wang, David Held
+  award: null
+  bib: "@inproceedings{weng2021fabricflownet,\n\
+    \     title={FabricFlowNet: Bimanual Cloth Manipulation \n\
+    \         with a Flow-based Policy},\n\
+    \     author={Weng, Thomas and Bajracharya, Sujay and \n\
+    \         Wang, Yufei and Agrawal, Khush and Held, David},\n\
+    \     booktitle={Conference on Robot Learning},\n\
+    \     year={2021}\n}"
+  img: ../assets/papers/ffn.gif
+  links:
+    '[Code]': https://github.com/thomasweng15/FabricFlowNet
+    '[OpenReview]': https://openreview.net/forum?id=TsqkJJMgHkk
+    '[PDF]': https://arxiv.org/pdf/2111.05623.pdf
+    '[Poster]': https://www.google.com/url?q=https%3A%2F%2Fopenreview.net%2Fattachment%3Fid%3DTsqkJJMgHkk%26name%3Dposter&sa=D&sntz=1&usg=AFQjCNH3PPtQ_vMMk00WEMRXG28cWK3ylQ
+  short_id: weng2021fabricflownet
+  site: https://sites.google.com/view/fabricflownet
+  title: '<a href="https://arxiv.org/abs/2111.05623">FabricFlowNet: Bimanual Cloth
+    Manipulation with a Flow-based Policy</a>'
+  venue: Conference on Robot Learning (CoRL), 2021
+  video_embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/r68EEzzj_Zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- abs: 'Cloth detection and manipulation is a common task in domestic and industrial
+    settings, yet such tasks remain a challenge for robots due to cloth deformability.
+    Furthermore, in many cloth-related tasks like laundry folding and bed making,
+    it is crucial to manipulate specific regions like edges and corners, as opposed
+    to folds. In this work, we focus on the problem of segmenting and grasping these
+    key regions. Our approach trains a network to segment the edges and corners of
+    a cloth from a depth image, distinguishing such regions from wrinkles or folds.
+    We also provide a novel algorithm for estimating the grasp location, direction,
+    and directional uncertainty from the segmentation. We demonstrate our method on
+    a real robot system and show that it outperforms baseline methods on grasping
+    success. Video and other supplementary materials are available at: https://github.com/thomasweng15/cloth-segmentation.'
+  authors: Jianing Qian*, Thomas Weng*, Luxin Zhang, Brian Okorn, David Held
+  award: null
+  bib: "@InProceedings{Qian_2020_IROS,\n\
+    \     author={Qian, Jianing and Weng, Thomas and Zhang, Luxin and Okorn, Brian and Held, David},\n\
+    \     booktitle={2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n\
+    \     title={Cloth Region Segmentation for Robust Grasp Selection},\n\
+    \     year={2020},\n\
+    \     volume={},\n\
+    \     number={},\n\
+    \     pages={9553-9560},\n\
+    \     doi={10.1109/IROS45743.2020.9341121}\n}"
+  img: ../assets/papers/cloth_grasping.gif
+  links:
+    '[PDF]': https://arxiv.org/pdf/2008.05626.pdf
+    '[Code]': https://github.com/thomasweng15/cloth-segmentation
+  short_id: qian2020iros
+  site: https://sites.google.com/view/cloth-segmentation
+  title: <a href="https://arxiv.org/abs/2008.05626">Cloth Region Segmentation for
+    Robust Grasp Selection</a>
+  venue: International Conference on Intelligent Robots and Systems (IROS), 2020
+  video_embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/iLgSz1PfVm0?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- abs: State-of-the-art object grasping methods rely on depth sensing to plan robust
+    grasps, but commercially available depth sensors fail to detect transparent and
+    specular objects. To improve grasping performance on such objects, we introduce
+    a method for learning a multi-modal perception model by bootstrapping from an
+    existing uni-modal model. This transfer learning approach requires only a pre-existing
+    uni-modal grasping model and paired multi-modal image data for training, foregoing
+    the need for ground-truth grasp success labels nor real grasp attempts. Our experiments
+    demonstrate that our approach is able to reliably grasp transparent and reflective
+    objects. Video and supplementary material are available at https://sites.google.com/view/transparent-specular-grasping.
+  authors: Thomas Weng, Amith Pallankize, Yimin Tang, Oliver Kroemer, David Held
+  award: null
+  bib: "@ARTICLE{9001238,\n\
+    \     author={Thomas Weng and Amith Pallankize and Yimin Tang and Oliver Kroemer and David Held},\n\
+    \     journal={IEEE Robotics and Automation Letters},\n\
+    \     title={Multi-Modal Transfer Learning for Grasping Transparent and Specular Objects},\n\
+    \     year={2020},\n\
+    \     volume={5},\n\
+    \     number={3},\n\
+    \     pages={3791-3798},\n\
+    \     doi={10.1109/LRA.2020.2974686}\n}"
+  img: ../assets/papers/transparent_grasping.gif
+  links:
+    '[PDF]': https://arxiv.org/pdf/2006.00028.pdf
+  short_id: weng2020ral
+  site: https://sites.google.com/view/transparent-specular-grasping
+  title: <a href="https://arxiv.org/abs/2006.00028">Multi-Modal Transfer Learning
+    for Grasping Transparent and Specular Objects</a>
+  venue: Robotics and Automation Letters (RAL) with presentation at the International
+    Conference of Robotics and Automation (ICRA), 2020
+  video_embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/rYRPWe0xLVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  tags:
+    - multimodal
+- abs: The ability to reference objects in the environment
+    is a key communication skill that robots need for complex, task-oriented 
+    human-robot collaborations. In this paper we explore
+    the use of projections, which are a powerful communication
+    channel for robot-to-human information transfer as they allow
+    for situated, instantaneous, and parallelized visual referencing.
+    We focus on the question of what makes a good projection for
+    referencing a target object. To that end, we mathematically
+    formulate legibility of projections intended to reference an
+    object, and propose alternative arrow-object match functions
+    for optimally computing the placement of an arrow to indicate a
+    target object in a cluttered scene. We implement our approach
+    on a PR2 robot with a head-mounted projector. Through an
+    online (48 participants) and an in-person (12 participants) user
+    study we validate the effectiveness of our approach, identify the
+    types of scenes where projections may fail, and characterize the
+    differences between alternative match functions.
+  authors: Thomas Weng, Leah Perlmutter, Stefanos Nikolaidis, Siddhartha Srinivasa, Maya Cakmak
+  award: null
+  bib: "@INPROCEEDINGS{8793638,\n\
+  \     author={Weng, Thomas and Perlmutter, Leah and Nikolaidis, Stefanos and Srinivasa, Siddhartha and Cakmak, Maya},\n\
+  \     booktitle={2019 International Conference on Robotics and Automation (ICRA)},\n\
+  \     title={Robot Object Referencing through Legible Situated Projections},\n\
+  \     year={2019},\n\
+  \     volume={},\n\
+  \     number={},\n\
+  \     pages={8004-8010},\n\
+  \     doi={10.1109/ICRA.2019.8793638}\n}"
+  img: ../assets/papers/icra19.png
+  links:
+    '[PDF]': https://personalrobotics.cs.washington.edu/publications/wang2019legibleprojections.pdf
+  short_id: weng2019legible
+  title: <a href="https://personalrobotics.cs.washington.edu/publications/wang2019legibleprojections.pdf">Robot Object Referencing through Legible Situated Projections</a>
+  venue: IEEE International Conference on Robotics and Automation (ICRA), 2019
+  video_embed: null
+- abs: Situated tangible robot programming allows programmers to reference parts of the workspace relevant
+    to the task by indicating objects, locations, and regions of interest using tangible blocks. While it takes 
+    advantage of situatedness compared to traditional text-based and visual programming tools, it does 
+    not allow programmers to inspect what the robot detects in the workspace, nor to understand any 
+    programming or execution errors that may arise. In this work we propose to use a projector mounted on 
+    the robot to provide such functionality. This allows us to provide an interactive situated tangible 
+    programming experience, taking advantage of situatedness, both in user input and system output, to 
+    reference parts of the robot workspace. We describe an implementation and evaluation of this 
+    approach, highlighting its differences from traditional robot programming.
+  authors: Yasaman S Sefidgar*, Thomas Weng*, Heather Harvey, Sarah Elliott, Maya Cakmak
+  award: null
+  bib: "@inproceedings{10.1145/3267782.3267921,\n\
+  \     author = {Sefidgar, Yasaman S. and Weng, Thomas and Harvey, Heather and Elliott, Sarah and Cakmak, Maya},\n\
+  \     title = {RobotIST: Interactive Situated Tangible Robot Programming},\n\
+  \     year = {2018},\n\
+  \     isbn = {9781450357081},\n\
+  \     publisher = {Association for Computing Machinery},\n\
+  \     address = {New York, NY, USA},\n\
+  \     url = {https://doi.org/10.1145/3267782.3267921},\n\
+  \     doi = {10.1145/3267782.3267921},\n\
+  \     booktitle = {Proceedings of the 2018 ACM Symposium on Spatial User Interaction},\n\
+  \     pages = {141–149},\n\
+  \     numpages = {9},\n\
+  \     keywords = {Robot Programming, Transparency, Situated Programming, Direct Manipulation, Tangible Programming},\n\
+  \     location = {Berlin, Germany},\n\
+  \     series = {SUI '18}\n}"
+  img: ../assets/papers/sui18.png
+  links:
+    '[PDF]': https://www.researchgate.net/profile/Yasaman_Sefidgar/publication/328176638_RobotIST_Interactive_Situated_Tangible_Robot_Programming/links/5bcabb13458515f7d9cba68b/RobotIST-Interactive-Situated-Tangible-Robot-Programming.pdf
+  short_id: sefidgar2018robotist
+  title: '<a href="https://www.researchgate.net/profile/Yasaman_Sefidgar/publication/328176638_RobotIST_Interactive_Situated_Tangible_Robot_Programming/links/5bcabb13458515f7d9cba68b/RobotIST-Interactive-Situated-Tangible-Robot-Programming.pdf">RobotIST: Interactive Situated Tangible Robot Programming</a>'
+  venue: Proceedings of the Symposium on Spatial User Interaction (SUI), 2018
+  video_embed: null

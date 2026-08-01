@@ -13,6 +13,40 @@
 #   video_embed: null
 #   tags:
 #     - null
+- abs: We introduce SOLE-R1, a video-language reasoning model designed to provide reward signals for online reinforcement learning in robotics. The model processes raw video observations and natural-language goals to perform spatiotemporal chain-of-thought reasoning and generate dense task progress estimates usable as rewards. SOLE-R1 is trained using a large-scale synthesis pipeline that creates temporally grounded reasoning traces with continuous progress supervision, combining foundational spatial and temporal reasoning through supervised fine-tuning and RL from verifiable rewards. Testing across four simulation environments and real-robot settings, SOLE-R1 enables zero-shot online RL from random initialization without ground-truth rewards, success indicators, demonstrations, or task-specific tuning. The model succeeds on 24 unseen tasks and outperforms strong baselines including GPT-5 and Gemini-3-Pro while showing greater robustness to reward hacking.
+  authors: Philip Schroeder, Thomas Weng, Karl Schmeckpeper, Eric Rosen, Stephen Hart, Ondrej Biza
+  award: null
+  bib: "@article{schroeder2026soler1,\n
+  \  title={SOLE-R1: Video-Language Reasoning as the Sole Reward for On-Robot Reinforcement Learning},\n
+  \  author={Schroeder, Philip and Weng, Thomas and Schmeckpeper, Karl and Rosen, Eric and Hart, Stephen and Biza, Ondrej},\n
+  \  journal={arXiv preprint arXiv:2603.28730},\n
+  \  year={2026}\n}"
+  img: ../assets/papers/soler1.gif
+  links:
+    '[arXiv]': https://arxiv.org/abs/2603.28730
+    '[Code]': https://github.com/Philip-MIT/sole-r1-model
+  short_id: schroeder2026soler1
+  site: https://Philip-MIT.github.io/sole-r1/
+  title: '<a href="https://arxiv.org/abs/2603.28730">SOLE-R1: Video-Language Reasoning as the Sole Reward for On-Robot Reinforcement Learning</a>'
+  venue: arXiv preprint, 2026
+  video_embed: null
+- abs: We investigate what occurs when a pretrained generative robot policy receives a constant initial noise vector instead of repeatedly sampling from a Gaussian distribution. We demonstrate that performance of a pretrained, frozen diffusion or flow matching policy can be enhanced for downstream rewards by replacing the standard practice of sampling initial noise from a prior distribution with a carefully selected, constant initial noise input—termed a "golden ticket." We propose simple search methods using Monte-Carlo policy evaluation to identify golden tickets. This approach keeps the pretrained policy frozen, requires no new network training, applies to all diffusion/flow matching policies, and only needs the ability to inject initial noise and calculate sparse task rewards from episode rollouts. The method improves performance in 46 out of 51 tasks across simulated and real-world robot manipulation benchmarks, with up to 55% absolute improvement in success rates for some simulated tasks, 28% improvement within 60 search episodes for real-world tasks, and 14% average performance boost across 7 tasks in multi-task settings using a single noise vector. Golden tickets optimized for one task can also transfer to improve related tasks.
+  authors: Omkar Patil, Ondrej Biza, Thomas Weng, Karl Schmeckpeper, Wil Thomason, Xiaohan Zhang, Kausik Sivakumar, Robin Walters, Nakul Gopalan, Sebastian Castro, Stephen Hart, Eric Rosen
+  award: null
+  bib: "@article{patil2026you,\n
+  \  title={You've Got a Golden Ticket: Improving Generative Robot Policies With A Single Noise Vector},\n
+  \  author={Patil, Omkar and Biza, Ondrej and Weng, Thomas and Schmeckpeper, Karl and Thomason, Wil and Zhang, Xiaohan and Sivakumar, Kausik and Walters, Robin and Gopalan, Nakul and Castro, Sebastian and Hart, Stephen and Rosen, Eric},\n
+  \  journal={arXiv preprint arXiv:2603.15757},\n
+  \  year={2026}\n}"
+  img: ../assets/papers/golden-ticket.png
+  links:
+    '[arXiv]': https://arxiv.org/abs/2603.15757
+    '[Code]': https://github.com/rai-opensource/lottery_tickets
+  short_id: patil2026golden
+  site: https://lottery-tickets.rai-inst.com/
+  title: '<a href="https://arxiv.org/abs/2603.15757">You''ve Got a Golden Ticket: Improving Generative Robot Policies With A Single Noise Vector</a>'
+  venue: arXiv preprint, 2026
+  video_embed: null
 - abs: Behavior Cloning (BC) has emerged as a highly effective paradigm for robot learning. However, BC lacks a self-guided mechanism for online improvement after demonstrations have been collected. Existing offline-to-online learning methods often cause policies to replace previously learned good actions due to a distribution mismatch between offline data and online learning. In this work, we propose Q2RL, Q-Estimation and Q-Gating from BC for Reinforcement Learning, an algorithm for efficient offline-to-online learning. Our method consists of two parts&#58; (1) Q-Estimation extracts a Q-function from a BC policy using a few interaction steps with the environment, followed by online RL with (2) Q-Gating, which switches between BC and RL policy actions based on their respective Q-values to collect samples for RL policy training. Across manipulation tasks from D4RL and robomimic benchmarks, Q2RL outperforms SOTA offline-to-online learning baselines on success rate and time to convergence. Q2RL is efficient enough to be applied in an on-robot RL setting, learning robust policies for contact-rich and high precision manipulation tasks such as pipe assembly and kitting, in 1-2 hours of online interaction, achieving success rates of up to 100% and up to 3.75x improvement against the original BC policy.
   authors: Lakshita Dodeja, Ondrej Biza, Shivam Vats, Stephen Hart, Stefanie Tellex, Robin Walters, Karl Schmeckpeper, Thomas Weng
   award: null
@@ -29,6 +63,23 @@
   site: https://q2rl.rai-inst.com/
   title: '<a href="https://arxiv.org/abs/2605.05172">When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning</a>'
   venue: Robotics Science and Systems (RSS), 2026
+  video_embed: null
+- abs: Vision-language models struggle with reasoning over extended video sequences, which limits their use in embodied settings. We propose ROVER (Reasoning Over VidEo Recursively), which enables the model to recursively decompose long-horizon video trajectories into segments corresponding to shorter subtasks. The framework was evaluated on OpenX Embodiment videos and a new dataset with 543 videos across 27 robotic manipulation tasks. ROVER exceeded baseline performance on three video reasoning tasks&#58; task progress estimation, frame-level natural language reasoning, and video question answering. The recursive decomposition approach mitigates hallucinations, especially during unexpected or non-optimal moments of a trajectory, and achieves linear time complexity scaling with video length.
+  authors: Philip Schroeder, Ondrej Biza, Thomas Weng, Hongyin Luo, James Glass
+  award: null
+  bib: "@inproceedings{schroeder2025rover,\n
+  \  title={ROVER: Recursive Reasoning Over Videos with Vision-Language Models for Embodied Tasks},\n
+  \  author={Schroeder, Philip and Biza, Ondrej and Weng, Thomas and Luo, Hongyin and Glass, James},\n
+  \  booktitle={39th Conference on Neural Information Processing Systems},\n
+  \  year={2025}\n}"
+  img: ../assets/papers/rover.gif
+  links:
+    '[arXiv]': https://arxiv.org/abs/2508.01943
+    '[Code]': https://github.com/Philip-MIT/rover-vlm
+  short_id: schroeder2025rover
+  site: https://rover-vlm.github.io/
+  title: '<a href="https://arxiv.org/abs/2508.01943">ROVER: Recursive Reasoning Over Videos with Vision-Language Models for Embodied Tasks</a>'
+  venue: Conference on Neural Information Processing Systems (NeurIPS), 2025
   video_embed: null
 - abs: Residual Reinforcement Learning (RL) is a popular approach for adapting pretrained policies by learning a lightweight residual policy that provides corrective actions. While Residual RL is more sample-efficient than finetuning the entire base policy, existing methods struggle with sparse rewards and are designed for deterministic base policies. We propose two improvements to Residual RL that further enhance its sample efficiency and make it suitable for stochastic base policies. First, we leverage uncertainty estimates of the base policy to focus exploration on regions in which the base policy is not confident. Second, we propose a simple modification to off-policy residual learning that allows it to observe base actions and better handle stochastic base policies. We evaluate our method with both Gaussian-based and Diffusion-based stochastic base policies on tasks from Robosuite and D4RL, and compare against state-of-the-art finetuning methods, demo-augmented RL methods, and other residual RL methods. Our algorithm significantly outperforms existing baselines in a variety of simulation benchmark environments. We also deploy our learned polices in the real world to demonstrate their robustness with zero-shot sim-to-real transfer.
   authors: Lakshita Dodeja, Karl Schmeckpeper, Shivam Vats, Thomas Weng, Mingxi Jia, George Konidaris, Stefanie Tellex

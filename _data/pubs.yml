@@ -22,6 +22,7 @@
   \  journal={arXiv preprint arXiv:2603.28730},\n
   \  year={2026}\n}"
   img: ../assets/papers/soler1.gif
+  alt: Robot task videos shown alongside language-model reasoning traces and predicted progress rewards.
   links:
     '[arXiv]': https://arxiv.org/abs/2603.28730
     '[Code]': https://github.com/Philip-MIT/sole-r1-model
@@ -39,6 +40,7 @@
   \  journal={arXiv preprint arXiv:2603.15757},\n
   \  year={2026}\n}"
   img: ../assets/papers/golden-ticket.png
+  alt: Diagram comparing randomly sampled noise with a fixed noise vector for generative robot policy inference.
   links:
     '[arXiv]': https://arxiv.org/abs/2603.15757
     '[Code]': https://github.com/rai-opensource/lottery_tickets
@@ -56,6 +58,7 @@
   \  booktitle={Robotics: Science and Systems (RSS)},\n
   \  year={2026}\n}"
   img: ../assets/papers/q2rl.gif
+  alt: Robot arms perform peg insertion, pipe assembly, and object-kitting tasks after on-robot reinforcement learning.
   links:
     '[arXiv]': https://arxiv.org/abs/2605.05172
     '[Code]': https://github.com/rai-opensource/q2rl
@@ -73,6 +76,7 @@
   \  booktitle={39th Conference on Neural Information Processing Systems},\n
   \  year={2025}\n}"
   img: ../assets/papers/rover.gif
+  alt: Recursive video-reasoning diagram decomposes a robot manipulation sequence into shorter subtasks.
   links:
     '[arXiv]': https://arxiv.org/abs/2508.01943
     '[Code]': https://github.com/Philip-MIT/rover-vlm
@@ -90,6 +94,7 @@
   \  journal={IEEE Robotics and Automation Letters},\n
   \  year={2025}\n}"
   img: ../assets/papers/ral25.gif
+  alt: Side-by-side robot rollouts compare a pretrained diffusion policy with the same policy augmented by residual reinforcement learning.
   links:
     '[arXiv]': https://arxiv.org/abs/2506.17564
     '[Code]': https://github.com/lakshitadodeja/uncertainty_aware_residual_rl/tree/main
@@ -115,6 +120,7 @@
   \  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},\n
   \  year={2023}\n}"
   img: ../assets/papers/ngdf_icra2023.gif
+  alt: Robot arm plans and executes grasps on several objects using a continuous grasp-distance field.
   links:
     '[arXiv]': https://arxiv.org/abs/2211.02647
     '[Code]': https://github.com/facebookresearch/NGDF/
@@ -151,6 +157,7 @@
   \ pages={7773-7780},\n
   \ doi={10.1109/IROS47612.2022.9981341}\n}"
   img: ../assets/papers/iros22.gif
+  alt: Tactile robot gripper lifts individual layers from a folded stack of cloth.
   links:
     '[arXiv]': https://arxiv.org/abs/2207.11196
     '[Code]': https://github.com/DanielTakeshi/cloth_reskin
@@ -181,6 +188,7 @@
     \     booktitle={Conference on Robot Learning},\n\
     \     year={2021}\n}"
   img: ../assets/papers/ffn.gif
+  alt: Two robot arms rearrange a piece of cloth into a target configuration.
   links:
     '[Code]': https://github.com/thomasweng15/FabricFlowNet
     '[OpenReview]': https://openreview.net/forum?id=TsqkJJMgHkk
@@ -215,6 +223,7 @@
     \     pages={9553-9560},\n\
     \     doi={10.1109/IROS45743.2020.9341121}\n}"
   img: ../assets/papers/cloth_grasping.gif
+  alt: Robot detects and grasps the edges and corners of cloths with varied shapes and patterns.
   links:
     '[PDF]': https://arxiv.org/pdf/2008.05626.pdf
     '[Code]': https://github.com/thomasweng15/cloth-segmentation
@@ -245,6 +254,7 @@
     \     pages={3791-3798},\n\
     \     doi={10.1109/LRA.2020.2974686}\n}"
   img: ../assets/papers/transparent_grasping.gif
+  alt: Robot identifies and grasps transparent objects that are poorly captured by a depth camera.
   links:
     '[PDF]': https://arxiv.org/pdf/2006.00028.pdf
   short_id: weng2020ral
@@ -284,6 +294,7 @@
   \     pages={8004-8010},\n\
   \     doi={10.1109/ICRA.2019.8793638}\n}"
   img: ../assets/papers/icra19.png
+  alt: PR2 robot projects an arrow onto a cluttered table to indicate an object to a person.
   links:
     '[PDF]': https://personalrobotics.cs.washington.edu/publications/wang2019legibleprojections.pdf
   short_id: weng2019legible
@@ -317,6 +328,7 @@
   \     location = {Berlin, Germany},\n\
   \     series = {SUI '18}\n}"
   img: ../assets/papers/sui18.png
+  alt: Robot projects visual feedback around tangible programming blocks arranged on a tabletop.
   links:
     '[PDF]': https://www.researchgate.net/profile/Yasaman_Sefidgar/publication/328176638_RobotIST_Interactive_Situated_Tangible_Robot_Programming/links/5bcabb13458515f7d9cba68b/RobotIST-Interactive-Situated-Tangible-Robot-Programming.pdf
   short_id: sefidgar2018robotist
@@ -342,6 +354,7 @@
   \   month = {May},\n\
   \   pages = {3352 - 3359},\n}"
   img: ../assets/papers/icra16.png
+  alt: Humanoid robot uses gaze and gestures to refer to objects arranged on a table.
   links:
     # '[PDF]': http://www.hennyadmoni.com/documents/admoni2016icra.pdf
   short_id: admoni2016icra
@@ -371,6 +384,7 @@
   \   pages={51-58},\n\
   \   doi={10.1109/HRI.2016.7451733}\n}"
   img: ../assets/papers/hri16.png
+  alt: Humanoid robot communicates with a participant completing a tabletop memorization task.
   links:
     '[PDF]': https://scazlab.yale.edu/sites/default/files/files/ADMONI_hri16.pdf
   short_id: admoni2016hri

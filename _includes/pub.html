@@ -1,51 +1,51 @@
 <tr>
     {% if pub.img %}
-        <td class='pubimg' width="250" height="100" style="text-align:center">
+        <td class='pubimg' width="250" height="100" style="text-align:center; padding-top: 12px; padding-bottom: 12px; vertical-align: top;">
             <img src="{{pub.img}}" img width="250" />
         </td>
     {% endif %}
-    <td>
-        {% if pub.site %}
-            <a href="{{pub.site}}">
+    <td style="padding-top: 12px; padding-bottom: 12px;">
+        <div style="font-size: 1.1em; font-weight: 500; margin-bottom: 6px; line-height: 1.3;">
+            {% if pub.site %}
+                <a href="{{pub.site}}">
+                    {{pub.title}}
+                </a>
+            {% else %}
                 {{pub.title}}
-            </a>
-        {% else %}
-            {{pub.title}}
-        {% endif %}
-        <br>
-        <div class="pubauthor">
+            {% endif %}
+        </div>
+        <div class="pubauthor" style="margin-bottom: 3px;">
             {{pub.authors}}
         </div>
         <div id="bib{{pub.short_id}}" style="display:none">
             <blockquote>
-                <pre>{{pub.bib}}</pre>
+                <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">{{pub.bib}}</pre>
             </blockquote>
         </div>
         <div id="abs{{pub.short_id}}" style="display:none">
-            <blockquote>
+            <blockquote style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 3px solid #ddd; margin: 10px 0; line-height: 1.6;">
                 {{pub.abs}}
             </blockquote>
         </div>
-        <div class="pubjournal">
+        <div class="pubjournal" style="margin-bottom: 6px;">
             {% if pub.award %}
                 {{pub.venue}} - {{pub.award}}
             {% else %}
                 {{pub.venue}}
-            {% endif %} 
-            <br>
+            {% endif %}
         </div>
-        <div style="font-size:small">
+        <div style="font-size:medium; margin-top: 6px;">
             {% if pub.site != null %}
-                <a href="{{pub.site}}">[Project Page]</a>
+                <a href="{{pub.site}}" style="margin-right: 5px;">[Project Page]</a>
             {% endif %}
             {% if pub.bib != null %}
-                <a href="javascript:copy(div{{pub.short_id}}, bib{{pub.short_id}})">[Bibtex]</a>
+                <a href="javascript:copy(div{{pub.short_id}}, bib{{pub.short_id}})" style="margin-right: 5px;">[Bibtex]</a>
             {% endif %}
             {% if pub.abs != null %}
-                <a href="javascript:copy(div{{pub.short_id}}, abs{{pub.short_id}})">[Abstract]</a>
+                <a href="javascript:copy(div{{pub.short_id}}, abs{{pub.short_id}})" style="margin-right: 5px;">[Abstract]</a>
             {% endif %}
             {% for link in pub.links %}
-                <a href="{{link[1]}}">{{link[0]}}</a>
+                <a href="{{link[1]}}" style="margin-right: 5px;">{{link[0]}}</a>
             {% endfor %}
         </div>
         <div id="div{{pub.short_id}}" class="pubInfo"></div>

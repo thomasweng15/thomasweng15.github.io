@@ -10,13 +10,16 @@ redirect_from: "/about"
     </div>
     <div class="col-sm-9">
       <p>
-        Hi, I am a Research Scientist at the <a href="https://rai-inst.com/">Robotics and AI Institute</a> (formerly the Boston Dynamics AI Institute). My research focuses on developing sample-efficient algorithms that enable robots to learn and adapt in the real world, with the goal of enabling robots to perform diverse manipulation tasks in unstructured human environments. 
+        Hi, I am a Research Scientist at the <a href="https://rai-inst.com/">Robotics and AI Institute</a>.
       </p>
       <p>
-        Prior to my current role, I completed my PhD with with Prof. <a href="http://davheld.github.io/">Dave Held</a> at the CMU Robotics Institute. I also previously worked on human-robot interaction with Prof. <a href="https://homes.cs.washington.edu/~mcakmak/">Maya Cakmak</a> at UW and Prof. <a href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a> at Yale. 
+        My research focuses on robot post-training via reinforcement learning: finetuning pretrained policies through real-world interaction for manipulation.
       </p>
       <p>
-        <a href="resources/cv.pdf">[ cv ]</a> &ensp; <a href="https://scholar.google.com/citations?hl=en&user=RGox7v4AAAAJ&view_op=list_works">[ google scholar ]</a> &ensp; <a href="https://github.com/thomasweng15">[ github ]</a> &ensp; <a href="https://twitter.com/thomas_weng">[ twitter ]</a>
+        I received my PhD from the Carnegie Mellon University Robotics Institute, where I was advised by Prof. <a href="http://davheld.github.io/">David Held</a>.
+      </p>
+      <p>
+        <a href="resources/cv.pdf">[ CV ]</a> &ensp; <a href="https://scholar.google.com/citations?hl=en&user=RGox7v4AAAAJ&view_op=list_works">[ Google Scholar ]</a> &ensp; <a href="https://github.com/thomasweng15">[ Github ]</a> &ensp; <a href="https://twitter.com/thomas_weng">[ X ]</a>
       </p>
       <p>
         Contact: tweng (at) rai-inst.com
@@ -37,10 +40,10 @@ redirect_from: "/about"
   <li><a href="/news">...see all news</a></li>
 </ul>
 
-<h2>Recent Blog Posts</h2>
+<h2>Blog Posts</h2>
 
 <div class="posts">
-  {% for post in site.posts limit:7 %}
+  {% for post in site.posts limit:4 %}
     <article>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </article>

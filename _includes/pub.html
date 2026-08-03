@@ -1,10 +1,10 @@
 <tr>
     {% if pub.img %}
-        <td class='pubimg' width="300" height="100" style="text-align:center; padding-top: 12px; padding-bottom: 12px; vertical-align: middle;">
+        <td class='pubimg'>
             <img src="{{pub.img}}" alt="{{pub.alt}}" width="300" />
         </td>
     {% endif %}
-    <td style="padding-top: 12px; padding-bottom: 12px;">
+    <td class="pubdesc">
         <div style="font-size: 1.1em; font-weight: 500; margin-bottom: 6px; line-height: 1.3;">
             {% if pub.site %}
                 <a href="{{pub.site}}">

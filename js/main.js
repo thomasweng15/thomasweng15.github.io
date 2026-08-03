@@ -1,7 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', main.init);
-
-
 function copy(dest, source) {
   if(dest.source == source) {
     dest.innerHTML = "";
